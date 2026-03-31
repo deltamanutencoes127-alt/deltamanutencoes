@@ -22,6 +22,8 @@ background:#f5f7fb;
 color:#333;
 }
 
+/* HEADER */
+
 header{
 background:#0B3D91;
 padding:15px 40px;
@@ -56,6 +58,8 @@ transition:.3s;
 nav a:hover{
 color:#FFD700;
 }
+
+/* HERO */
 
 .hero{
 background:linear-gradient(120deg,#0B3D91,#06296b);
@@ -95,6 +99,8 @@ transition:.3s;
 transform:translateY(-3px);
 }
 
+/* SECTIONS */
+
 .section{
 padding:80px 20px;
 text-align:center;
@@ -130,6 +136,8 @@ background:#0B3D91;
 color:white;
 }
 
+/* FOOTER */
+
 footer{
 background:#06296b;
 color:white;
@@ -139,6 +147,40 @@ padding:40px;
 
 footer p{
 margin:5px 0;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+font-size:28px;
+padding:15px 18px;
+border-radius:50%;
+box-shadow:0 4px 15px rgba(0,0,0,0.3);
+text-decoration:none;
+z-index:1000;
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+/* ANIMAÇÕES */
+
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
 }
 
 </style>
@@ -162,7 +204,7 @@ margin:5px 0;
 
 </header>
 
-<section class="hero">
+<section class="hero fade">
 
 <img src="logo.png">
 
@@ -170,11 +212,11 @@ margin:5px 0;
 
 <p>Excelência em cuidar do seu condomínio</p>
 
-<a href="#" class="btn">Solicitar Orçamento</a>
+<a href="https://wa.me/5583998824850" class="btn">Solicitar Orçamento</a>
 
 </section>
 
-<section class="section">
+<section class="section fade">
 
 <h2>Nossos Serviços</h2>
 
@@ -214,7 +256,7 @@ margin:5px 0;
 
 </section>
 
-<section class="section sobre">
+<section class="section sobre fade">
 
 <h2>Sobre a Empresa</h2>
 
@@ -228,18 +270,18 @@ manutenção predial e serviços para condomínios residenciais e comerciais.
 
 </section>
 
-<section class="section atendimento">
+<section class="section atendimento fade">
 
 <h2>Área de Atendimento</h2>
 
 <p>João Pessoa - PB</p>
 <p>Cabedelo - PB</p>
 
-<a href="#" class="btn">Solicitar Orçamento</a>
+<a href="https://wa.me/5583998824850" class="btn">Solicitar Orçamento</a>
 
 </section>
 
-<section class="section">
+<section class="section fade">
 
 <h2>Contato</h2>
 
@@ -248,7 +290,7 @@ manutenção predial e serviços para condomínios residenciais e comerciais.
 
 </section>
 
-<footer>
+<footer class="fade">
 
 <h3>Delta Prime Manutenções Condominiais LTDA</h3>
 
@@ -259,6 +301,34 @@ manutenção predial e serviços para condomínios residenciais e comerciais.
 <p>Email: deltamanutencoes127@gmail.com</p>
 
 </footer>
+
+<!-- BOTÃO WHATSAPP -->
+
+<a href="https://wa.me/5583998824850" class="whatsapp" target="_blank">
+💬
+</a>
+
+<!-- SCRIPT ANIMAÇÃO -->
+
+<script>
+
+const elements = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', ()=>{
+
+elements.forEach(el=>{
+const position = el.getBoundingClientRect().top;
+const screen = window.innerHeight;
+
+if(position < screen - 100){
+el.classList.add('show');
+}
+
+})
+
+})
+
+</script>
 
 </body>
 </html>
