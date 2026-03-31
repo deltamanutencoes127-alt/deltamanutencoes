@@ -3,235 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Delta Prime Manutenções Condominiais LTDA</title>
-<meta name="description" content="Delta Prime Manutenções Condominiais em João Pessoa. Serviços de manutenção predial, elétrica, hidráulica e pintura para condomínios.">
-<meta name="keywords" content="manutenção condominial, manutenção predial, João Pessoa, eletricista condomínio, hidráulica condomínio">
-<meta name="author" content="Delta Prime">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Delta Prime Manutenções Condominiais</title>
 
 <style>
 
-body {
+body{
 margin:0;
-font-family:'Poppins', sans-serif;
-background:#f5f7fa;
+font-family:Arial, Helvetica, sans-serif;
 color:#333;
 }
 
 header{
-background:#0B3D91;
-color:white;
-padding:20px;
+background:#0b3d91;
+padding:20px 0;
 text-align:center;
 }
 
 .logo{
-max-width:250px;
-margin-bottom:10px;
-}
-
-header p{
-color:#FFD700;
-font-weight:600;
+width:320px;
+max-width:90%;
 }
 
 .hero{
-background:linear-gradient(rgba(11,61,145,0.9), rgba(11,61,145,0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab');
+background:linear-gradient(rgba(11,61,145,0.9),rgba(11,61,145,0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab');
 background-size:cover;
 background-position:center;
 color:white;
-padding:80px 20px;
 text-align:center;
+padding:80px 20px;
 }
 
-.btn{
-background:#FFD700;
-color:#0B3D91;
-padding:14px 25px;
-border-radius:6px;
+.hero h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.botao{
+background:#ffd000;
+padding:15px 25px;
+border-radius:5px;
 text-decoration:none;
-font-weight:600;
+color:#000;
+font-weight:bold;
+display:inline-block;
+margin-top:20px;
 }
 
-.section{
+.servicos{
 padding:60px 20px;
 text-align:center;
 }
 
-.section h2{
-color:#0B3D91;
-}
-
-.services{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
 gap:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-width:260px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.contact{
-background:#0B3D91;
-color:white;
-}
-
-footer{
-background:#091f4f;
-color:white;
-padding:25px;
-text-align:center;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-.topo{
-background:#0b3d91;
-padding:15px 0;
-position:sticky;
-top:0;
-z-index:999;
-}
-
-.container-topo{
-display:flex;
-justify-content:space-between;
-align-items:center;
-width:90%;
+max-width:1100px;
 margin:auto;
 }
 
-.logo-topo{
-height:70px;
+.card{
+background:#f5f5f5;
+padding:25px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
-
-nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
-font-weight:600;
-}
-
-nav a:hover{
-color:#ffd000;
-}
-
-.botao-fixo{
-position:fixed;
-bottom:100px;
-right:30px;
-background:#ffd000;
-color:#000;
-padding:12px 18px;
-border-radius:30px;
-font-weight:bold;
-text-decoration:none;
-box-shadow:0 3px 10px rgba(0,0,0,0.2);
-}
-
-.botao-fixo:hover{
-background:#ffcc00;
-}
-
-</style>
-
-<style>
-.logo-principal{
-  width: 420px;
-  max-width: 90%;
-  height: auto;
-  display:block;
-  margin: 0 auto 20px auto;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes fadeIn{
-  from{opacity:0; transform: translateY(-20px);} 
-  to{opacity:1; transform: translateY(0);} 
-}
-
-.whatsapp-float{
-position:fixed;
-width:60px;
-height:60px;
-bottom:30px;
-right:30px;
-background:#25d366;
-color:#fff;
-border-radius:50px;
+.sobre{
+background:#f9f9f9;
+padding:60px 20px;
 text-align:center;
-font-size:30px;
-box-shadow:2px 2px 3px #999;
-z-index:100;
-display:flex;
-align-items:center;
-justify-content:center;
-text-decoration:none;
 }
 
-.whatsapp-float:hover{
-background:#1ebe5d;
+.mapa{
+padding:60px 20px;
+text-align:center;
 }
+
+footer{
+background:#0b3d91;
+color:white;
+text-align:center;
+padding:30px 20px;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<header class="topo">
-<div class="container-topo">
-<img src="logo-delta.png" class="logo-topo">
-<nav>
-<a href="#servicos">Serviços</a>
-<a href="#sobre">Sobre</a>
-<a href="#contato">Contato</a>
-</nav>
-</div>
-</header>
-
 <header>
-<img src="logo-delta.png" alt="Delta Prime Manutenções Condominiais" class="logo-principal">
-<h1>Delta Prime Manutenções Condominiais LTDA</h1>
-<p>Excelência em cuidar do seu condomínio</p>
+<img src="logo.png" class="logo" alt="Delta Prime">
 </header>
 
 <section class="hero">
-<h2>Serviços Profissionais para Condomínios</h2>
-<p>
-Especialistas em manutenção predial e serviços condominiais em João Pessoa.
-Atendimento rápido, qualidade garantida e equipe qualificada.
-</p>
-<a class="btn" href="https://wa.me/5583998824850">Solicitar Orçamento</a>
+<h1>Delta Prime Manutenções Condominiais</h1>
+<p>Excelência em cuidar do seu condomínio</p>
+<a href="https://wa.me/5583998824850" class="botao">Solicitar Orçamento</a>
 </section>
 
-<section class="section">
+<section class="servicos">
 <h2>Nossos Serviços</h2>
 
-<div class="services">
+<div class="grid">
 
 <div class="card">
 <h3>Manutenção Predial</h3>
@@ -250,65 +129,42 @@ Atendimento rápido, qualidade garantida e equipe qualificada.
 
 <div class="card">
 <h3>Pintura Predial</h3>
-<p>Pintura e revitalização de condomínios</p>
+<p>Pintura e revitalização</p>
 </div>
 
 <div class="card">
 <h3>Limpeza Técnica</h3>
-<p>Limpeza profissional de áreas comuns</p>
+<p>Limpeza profissional</p>
 </div>
 
 <div class="card">
 <h3>Serviços Gerais</h3>
-<p>Soluções completas para seu condomínio</p>
+<p>Soluções completas</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section">
+<section class="sobre">
 <h2>Sobre a Empresa</h2>
-<p>
-A Delta Prime Manutenções Condominiais LTDA atua com excelência na prestação de serviços para condomínios.
-Nosso objetivo é oferecer soluções eficientes com segurança, qualidade e profissionalismo.
-</p>
+<p>A Delta Prime Manutenções Condominiais atua com excelência em serviços para condomínios em João Pessoa e Cabedelo.</p>
 </section>
 
-<section class="section contact">
-<h2>Solicite um Orçamento</h2>
-<p>Entre em contato agora mesmo</p>
-<a class="btn" href="https://wa.me/5583998824850">Falar no WhatsApp</a>
-</section>
-
-<section class="section">
+<section class="mapa">
 <h2>Atendemos João Pessoa e Cabedelo</h2>
-<iframe src="https://www.google.com/maps?q=João%20Pessoa%20e%20Cabedelo%20PB&output=embed" width="100%" height="300" style="border:0;"></iframe>
+
+<iframe src="https://www.google.com/maps?q=João+Pessoa+PB&output=embed" width="100%" height="300" style="border:0;"></iframe>
+
 </section>
 
 <footer>
-<p>© 2026 Delta Prime Manutenções Condominiais LTDA</p>
-<p>Atendimento em João Pessoa e Cabedelo - PB</p>
-<p>WhatsApp: (83) 99882-4850</p>
-<p>Email: deltamanutencoes127@gmail.com</p>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/5583998824850">WhatsApp</a>
-
-
-
-
-<section id="mapa" style="padding:40px;text-align:center;background:#f5f5f5;">
-<h2>Atendemos João Pessoa e Cabedelo</h2>
-<iframe src="https://www.google.com/maps?q=João+Pessoa+PB&output=embed" width="100%" height="300" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy"></iframe>
-</section>
-
-<footer style="background:#0b3d91;color:white;text-align:center;padding:30px 10px;">
-<p><strong>Delta Prime Manutenções Condominiais LTDA</strong></p>
+<p>Delta Prime Manutenções Condominiais LTDA</p>
 <p>João Pessoa e Cabedelo - PB</p>
 <p>WhatsApp: (83) 99882-4850</p>
 <p>Email: deltamanutencoes127@gmail.com</p>
 </footer>
 
 </body>
+
 </html>
