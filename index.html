@@ -21,169 +21,96 @@ body{
 background:#f5f6fa;
 }
 
-/* HEADER */
-
 header{
-background:#0f3c88;
-padding:20px 60px;
+background:#0B3D91;
+padding:15px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+color:white;
 }
 
 .logo{
 display:flex;
 align-items:center;
-gap:15px;
-color:white;
-font-weight:600;
-font-size:18px;
+gap:10px;
 }
 
 .logo img{
-height:60px;
+height:50px;
 }
 
 nav a{
 color:white;
-margin-left:30px;
+margin-left:20px;
 text-decoration:none;
 font-weight:500;
-transition:.3s;
 }
-
-nav a:hover{
-color:#ffd000;
-}
-
-/* HERO */
 
 .hero{
-background:linear-gradient(135deg,#0f3c88,#1f5bd8);
+background:#0B3D91;
 color:white;
 text-align:center;
-padding:80px 20px;
+padding:60px 20px;
 }
 
 .hero img{
-width:180px;
+width:140px;
 margin-bottom:20px;
 }
 
 .hero h1{
-font-size:36px;
-margin-bottom:10px;
+font-size:28px;
 }
 
 .hero p{
-color:#ffd000;
-font-weight:500;
-font-size:18px;
+color:#FFD700;
+margin-top:10px;
 }
-
-/* SERVIÇOS */
 
 .servicos{
-padding:70px 20px;
+padding:50px 20px;
 text-align:center;
-}
-
-.servicos h2{
-font-size:32px;
-margin-bottom:40px;
-color:#333;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:20px;
 max-width:1100px;
 margin:auto;
 }
 
 .card{
 background:white;
-padding:30px;
-border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-transition:.3s;
+padding:25px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card h3{
-margin-bottom:10px;
-color:#0f3c88;
-}
-
-/* CTA */
 
 .cta{
-background:#0f3c88;
+background:#0B3D91;
 color:white;
 text-align:center;
-padding:60px 20px;
+padding:40px;
 }
 
 .botao{
-background:#ffd000;
-color:black;
-padding:15px 35px;
+background:#FFD700;
+padding:15px 30px;
+border-radius:6px;
 display:inline-block;
-border-radius:8px;
-margin-top:20px;
+margin-top:15px;
 text-decoration:none;
-font-weight:600;
-transition:.3s;
+color:black;
+font-weight:bold;
 }
-
-.botao:hover{
-background:#ffcc00;
-}
-
-/* CONTATO */
-
-.contato{
-padding:70px 20px;
-text-align:center;
-background:white;
-}
-
-.contato h2{
-margin-bottom:20px;
-font-size:30px;
-color:#333;
-}
-
-.info{
-margin-top:20px;
-line-height:28px;
-}
-
-/* FOOTER */
 
 footer{
-background:#0a2d66;
+background:#072c6b;
 color:white;
 text-align:center;
 padding:30px;
-}
-
-@media(max-width:768px){
-
-header{
-padding:20px;
-flex-direction:column;
-gap:15px;
-}
-
-.hero h1{
-font-size:26px;
-}
-
 }
 
 </style>
@@ -195,20 +122,20 @@ font-size:26px;
 <header>
 
 <div class="logo">
-<img src="logo.png" alt="Delta Prime">
-<span>Delta Prime</span>
+<img src="logo.png" onerror="this.style.display='none'">
+<h3>Delta Prime</h3>
 </div>
 
 <nav>
-<a href="#servicos">Serviços</a>
-<a href="#contato">Contato</a>
+<a href="#">Serviços</a>
+<a href="#">Contato</a>
 </nav>
 
 </header>
 
 <section class="hero">
 
-<img src="logo.png" alt="Delta Prime">
+<img src="logo.png" onerror="this.style.display='none'">
 
 <h1>Delta Prime Manutenções Condominiais LTDA</h1>
 
@@ -216,7 +143,7 @@ font-size:26px;
 
 </section>
 
-<section class="servicos" id="servicos">
+<section class="servicos">
 
 <h2>Nossos Serviços</h2>
 
@@ -264,25 +191,14 @@ font-size:26px;
 
 </section>
 
-<section class="contato" id="contato">
+<footer>
 
-<h2>Contato</h2>
-
-<div class="info">
-<p><strong>Delta Prime Manutenções Condominiais LTDA</strong></p>
+<p>Delta Prime Manutenções Condominiais LTDA</p>
 <p>João Pessoa e Cabedelo - PB</p>
 <p>WhatsApp: (83) 99882-4850</p>
 <p>Email: deltamanutencoes127@gmail.com</p>
-</div>
-
-</section>
-
-<footer>
-
-<p>© 2026 Delta Prime Manutenções Condominiais LTDA</p>
 
 </footer>
 
 </body>
-
 </html>
