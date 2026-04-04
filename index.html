@@ -24,19 +24,35 @@
     </script>
 
     <style>
-        body { font-family: 'Segoe UI', sans-serif; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         
-        /* NOVO FUNDO: IMAGEM DE UM PRÉDIO MODERNO */
+        /* SEÇÃO HERO COM IMAGEM DE PRÉDIO CORRIGIDA */
         .hero-section {
-            background: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), 
-                        url('http://googleusercontent.com/image_collection/image_retrieval/1106185269227982005');
+            background: linear-gradient(rgba(0, 31, 63, 0.7), rgba(0, 31, 63, 0.7)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            background-repeat: no-repeat;
         }
         
-        .btn-gold { background-color: #d4af37; color: #001f3f; transition: all 0.3s; }
-        .btn-gold:hover { background-color: #b8962e; transform: scale(1.05); }
+        .btn-gold { 
+            background-color: #d4af37; 
+            color: #001f3f; 
+            transition: all 0.3s ease; 
+        }
+        .btn-gold:hover { 
+            background-color: #b8962e; 
+            transform: scale(1.05); 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Ajuste para dispositivos móveis: remove o fixed no celular para melhor performance */
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -48,7 +64,7 @@
     <header class="bg-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="logo.png" alt="Delta Prime Logo" class="h-16 md:h-24 w-auto object-contain">
+                <img src="logo.png" alt="Delta Prime Logo" class="h-16 md:h-20 w-auto object-contain">
             </div>
             <nav class="hidden md:flex space-x-8 font-semibold text-gray-700">
                 <a href="#inicio" class="hover:text-gold transition">Início</a>
@@ -62,7 +78,7 @@
         </div>
     </header>
 
-    <section id="inicio" class="hero-section h-[550px] flex items-center text-white text-center">
+    <section id="inicio" class="hero-section h-[600px] flex items-center text-white text-center">
         <div class="container mx-auto px-6">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tight">
                 EXCELÊNCIA EM <span class="text-gold">MANUTENÇÃO PREDIAL</span>
@@ -74,7 +90,7 @@
                 <a href="#servicos" class="btn-gold px-10 py-4 rounded-md font-black shadow-xl">
                     NOSSOS SERVIÇOS
                 </a>
-                <a href="https://wa.me/5583998824850" target="_blank" class="bg-white text-delta px-10 py-4 rounded-md font-black hover:bg-gray-200 transition shadow-xl">
+                <a href="https://wa.me/5583998824850" target="_blank" class="bg-white text-delta px-10 py-4 rounded-md font-black hover:bg-gray-200 transition shadow-xl border-2 border-white">
                     FALAR COM GESTOR
                 </a>
             </div>
@@ -85,29 +101,29 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold text-delta mb-6">Compromisso com seu Patrimônio</h2>
+                    <h2 class="text-3xl font-bold text-delta mb-6 border-l-4 border-gold pl-4">Compromisso com seu Patrimônio</h2>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        A Delta Prime atua com uma equipe qualificada para garantir que a infraestrutura do seu condomínio funcione sem interrupções, focando na segurança e valorização predial.
+                        A Delta Prime atua com uma equipe altamente qualificada para garantir que a infraestrutura do seu condomínio funcione sem interrupções, focando na segurança, durabilidade e valorização do imóvel.
                     </p>
-                    <div class="flex gap-6 font-bold text-delta">
-                        <span class="flex items-center gap-2"><i class="fas fa-check text-gold"></i> Atendimento Ágil</span>
-                        <span class="flex items-center gap-2"><i class="fas fa-check text-gold"></i> Equipe Certificada</span>
+                    <div class="flex flex-wrap gap-6 font-bold text-delta">
+                        <span class="flex items-center gap-2"><i class="fas fa-check-circle text-gold"></i> Atendimento Ágil</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-check-circle text-gold"></i> Equipe Certificada</span>
                     </div>
                 </div>
-                <div class="md:w-1/2 bg-delta p-8 rounded-2xl shadow-xl text-white">
-                    <h3 class="text-gold text-xl font-bold mb-4 text-center">Por que nos escolher?</h3>
-                    <ul class="space-y-4">
+                <div class="md:w-1/2 bg-delta p-8 rounded-2xl shadow-2xl text-white">
+                    <h3 class="text-gold text-xl font-bold mb-6 text-center underline underline-offset-8 decoration-1">Por que nos escolher?</h3>
+                    <ul class="space-y-5">
                         <li class="flex items-start gap-3">
-                            <i class="fas fa-star text-gold mt-1"></i>
-                            <p>Relatórios fotográficos detalhados após cada serviço.</p>
+                            <i class="fas fa-clipboard-check text-gold mt-1"></i>
+                            <p>Relatórios fotográficos detalhados após cada serviço realizado.</p>
                         </li>
                         <li class="flex items-start gap-3">
-                            <i class="fas fa-star text-gold mt-1"></i>
-                            <p>Uso de materiais de primeira linha e normas ABNT.</p>
+                            <i class="fas fa-shield-alt text-gold mt-1"></i>
+                            <p>Uso rigoroso de materiais de primeira linha e normas ABNT.</p>
                         </li>
                         <li class="flex items-start gap-3">
-                            <i class="fas fa-star text-gold mt-1"></i>
-                            <p>Transparência total nos orçamentos e cronogramas.</p>
+                            <i class="fas fa-handshake text-gold mt-1"></i>
+                            <p>Transparência total em orçamentos, prazos e cronogramas.</p>
                         </li>
                     </ul>
                 </div>
@@ -117,46 +133,50 @@
 
     <section id="servicos" class="py-20 bg-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-2 text-delta uppercase">Nossas Especialidades</h2>
-            <div class="w-20 h-1 bg-gold mx-auto mb-12"></div>
+            <h2 class="text-3xl font-bold mb-2 text-delta uppercase tracking-widest">Nossas Especialidades</h2>
+            <div class="w-24 h-1 bg-gold mx-auto mb-12"></div>
             
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all">
-                    <i class="fas fa-bolt text-5xl text-gold mb-6"></i>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-2xl transition-all group">
+                    <i class="fas fa-bolt text-5xl text-gold mb-6 group-hover:scale-110 transition-transform"></i>
                     <h3 class="font-bold text-xl mb-3 text-delta">Elétrica</h3>
-                    <p class="text-gray-500 text-sm">Quadros, bombas e iluminação LED.</p>
+                    <p class="text-gray-500 text-sm">Quadros de comando, bombas hidráulicas e iluminação LED eficiente.</p>
                 </div>
-                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all">
-                    <i class="fas fa-faucet text-5xl text-gold mb-6"></i>
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-2xl transition-all group">
+                    <i class="fas fa-faucet text-5xl text-gold mb-6 group-hover:scale-110 transition-transform"></i>
                     <h3 class="font-bold text-xl mb-3 text-delta">Hidráulica</h3>
-                    <p class="text-gray-500 text-sm">Colunas, barriletes e infiltrações.</p>
+                    <p class="text-gray-500 text-sm">Manutenção de colunas, barriletes e correção de infiltrações.</p>
                 </div>
-                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all">
-                    <i class="fas fa-paint-roller text-5xl text-gold mb-6"></i>
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-2xl transition-all group">
+                    <i class="fas fa-paint-roller text-5xl text-gold mb-6 group-hover:scale-110 transition-transform"></i>
                     <h3 class="font-bold text-xl mb-3 text-delta">Pintura/Fachada</h3>
-                    <p class="text-gray-500 text-sm">Restauração e pintura profissional.</p>
+                    <p class="text-gray-500 text-sm">Restauração predial, lavagem e pintura profissional de fachadas.</p>
                 </div>
-                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all">
-                    <i class="fas fa-tools text-5xl text-gold mb-6"></i>
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-2xl transition-all group">
+                    <i class="fas fa-tools text-5xl text-gold mb-6 group-hover:scale-110 transition-transform"></i>
                     <h3 class="font-bold text-xl mb-3 text-delta">Zeladoria</h3>
-                    <p class="text-gray-500 text-sm">Reparos gerais e manutenção preventiva.</p>
+                    <p class="text-gray-500 text-sm">Pequenos reparos e contratos de manutenção preventiva periódica.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contato" class="bg-delta text-white pt-16 pb-8">
+    <footer id="contato" class="bg-delta text-white pt-16 pb-8 border-t-4 border-gold">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-2xl font-bold mb-8 text-gold uppercase">Solicite uma Visita Técnica</h2>
-            <a href="https://wa.me/5583998824850" target="_blank" class="btn-gold px-10 py-4 rounded-full text-lg font-bold inline-flex items-center">
-                <i class="fab fa-whatsapp mr-2 text-2xl"></i> (83) 9 9882-4850
+            <h2 class="text-2xl font-bold mb-8 text-gold uppercase tracking-widest">Solicite uma Visita Técnica</h2>
+            <a href="https://wa.me/5583998824850" target="_blank" class="btn-gold px-10 py-5 rounded-full text-lg font-extrabold inline-flex items-center hover:shadow-[0_0_20px_rgba(212,175,55,0.5)]">
+                <i class="fab fa-whatsapp mr-3 text-2xl"></i> (83) 9 9882-4850
             </a>
-            <p class="mt-8 text-gray-400">deltamanutencoes127@gmail.com</p>
-            <p class="text-xs text-gray-500 mt-12 italic">© 2026 Delta Prime Manutenções Condominiais LTDA.</p>
+            <div class="mt-10 space-y-2">
+                <p class="text-gray-300"><i class="fas fa-envelope text-gold mr-2"></i> deltamanutencoes127@gmail.com</p>
+                <p class="text-gray-300"><i class="fas fa-map-marker-alt text-gold mr-2"></i> João Pessoa - PB</p>
+            </div>
+            <hr class="my-12 border-gray-700 opacity-30">
+            <p class="text-xs text-gray-500 italic">© 2026 Delta Prime Manutenções Condominiais LTDA. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/5583998824850" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 transition-all z-50 animate-bounce">
+    <a href="https://wa.me/5583998824850" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 transition-all z-[100] animate-bounce">
         <i class="fab fa-whatsapp"></i>
     </a>
 
